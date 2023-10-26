@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: label-nodes
+spec:
+  template:
+    spec:
+      containers:
+      - name: label-nodes
+        image: 
+          repository: radial/busyboxplus
+          tag: base
+          pullPolicy: IfNotPresent
+        command: ["sh", "-c"]
+        args:
+        - |
+          kubectl label nodes -l node1 group=group1
+          kubectl label nodes -l node2 group=group2
+        resources: {}
+      restartPolicy: OnFailure
