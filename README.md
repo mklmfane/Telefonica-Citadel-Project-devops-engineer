@@ -1,19 +1,15 @@
 # Telefonica-Citadel-Project-devops-engineer
-Code challenge for Devops Engineer in Telefonica Citadel Project
-Devops Engineer Code Challenge
-Code challenge for Devops Engineer in Telefonica Citadel Project. We’d like you
-to design and develop a playable demo to create and deploy a helm chart.
+  Code challenge for Devops Engineer in Telefonica Citadel Project
+  Devops Engineer Code Challenge
+  Code challenge for Devops Engineer in Telefonica Citadel Project. We’d like you to design and develop a playable demo to create and deploy a helm chart.
 
-Challenges
+  Challenges
 
-Challenge 1
-Modify the Ping Helm Chart to deploy the application on the following restric-
-tions:
-• Isolate specific node groups forbidding the pods scheduling in this node
-groups.
-• Ensure that a pod will not be scheduled on a node that already has a pod
-of the same type.
-• Pods are deployed across different availability zones.
+   Challenge 1
+   Modify the Ping Helm Chart to deploy the application on the following restric-tions:
+   • Isolate specific node groups forbidding the pods scheduling in this node groups.
+   • Ensure that a pod will not be scheduled on a node that already has a podof the same type.
+   • Pods are deployed across different availability zones.
 
 Challenge 2
 We have a private registry based on Azure Container Registry where we publish
@@ -80,7 +76,8 @@ Challenge 3
 Create a Github workflow to allow installing helm chart from Challenge #1
 using module from Challenge #2, into an AKS cluster (considering a preexisting
 resource group and cluster name).
-2How do we evaluate the test?
-1. How clear your code is.
-2. How clear your explanation is.
-3. Easiness to run the code.
+
+2. How do we evaluate the test?
+    1. How clear your code is.
+    2. How clear your explanation is.
+    3. Easiness to run the code.
