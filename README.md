@@ -20,39 +20,40 @@
 
   module "chart" {  
   . . .  
-    &nbsp;acr_server = "instance.azurecr.io"  
-    &nbsp;acr_server_subscription = "c9e7611c-d508-4fbf-aede-0bedfabc1560"   
-    &nbsp;source_acr_client_id = "1b2f651e-b99c-4720-9ff1-ede324b8ae30"   
-    &nbsp;source_acr_client_secret = "Zrrr8~5~F2Xiaaaa7eS.S85SXXAAfTYizZEF1cRp"   
-    &nbsp;source_acr_server = "reference.azurecr.io"   
-     charts = [{   
-         chart_name = <chart_name>  
-         chart_namespace = <chart_namespace>  
-         chart_repository = <chart_repository>  
-         chart_version = <chart_version>  
-         values = [  
-         {  
-            name = <name>  
-            value = <value>  
-         },   
-         {  
-            name = <name>   
-            value = <value>   
-         }  
-         ]  
-      sensitive_values = [{  
-          name = <name>  
-          value = <value>  
-      },  
-      {  
-          name = <name>  
-          value = <value>  
-      }]  
-      },  
-      {  
-         . . .  
-      }]  
-  }      
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; acr_server = "instance.azurecr.io"  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; acr_server_subscription = "c9e7611c-d508-4fbf-aede-0bedfabc1560"   
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; source_acr_client_id = "1b2f651e-b99c-4720-9ff1-ede324b8ae30"   
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; source_acr_client_secret = "Zrrr8~5~F2Xiaaaa7eS.S85SXXAAfTYizZEF1cRp"   
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; source_acr_server = "reference.azurecr.io"   
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  charts = [{   
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    chart_name = <chart_name>  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    chart_namespace = <chart_namespace>  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    chart_repository = <chart_repository>  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    chart_version = <chart_version>  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      values = [  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;        {  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;           name = <name>  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;           value = <value>  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;        },   
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;        {  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;           name = <name>   
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;           value = <value>   
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;        }  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      ]  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      sensitive_values = [{  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;         name = <name>  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;         value = <value>  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      },  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      {  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;         name = <name>  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;         value = <value>  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      }]  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     },  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     {  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;        . . .  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     }]  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }  
+        
   You need to implement the reusable module. It should pass validations provided by the terraform fmt and terraform validate commands.    
   You can assume the caller will be authenticated in Azure with enough permissions to import Helm charts into the instance registry and will provide the  module a configured helm provider.     
 
