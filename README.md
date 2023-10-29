@@ -2,8 +2,8 @@
   ## Code challenge for Devops Engineer in Telefonica Citadel Project <br />
   ## Devops Engineer Code Challenge <br />
   ## Code challenge for Devops Engineer in Telefonica Citadel Project. We’d like you to design and develop a playable demo to create and deploy a helm chart <br />
-<br />
-  <p>### Challenges <br />
+
+## Challenges  
 
    #### Challenge 1
    Modify the Ping Helm Chart to deploy the application on the following restric-tions: <br>
