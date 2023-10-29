@@ -3,6 +3,7 @@
   ## Devops Engineer Code Challenge  
   <p>Code challenge for Devops Engineer in Telefonica Citadel Project. We’d like you to design and develop a playable demo to create and deploy a helm chart  
   </p>
+  
   ## Challenges  
 
    ### Challenge 1  
