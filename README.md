@@ -14,12 +14,15 @@
    * Pods are deployed across different availability zones.
 
    #### Challenge 2
-  We have a private registry based on Azure Container Registry where we publish all our Helm charts. Let’s call this registry reference.azurecr.io.
-  When we create an AKS cluster, we also create another Azure Container Registry where we need to copy the Helm charts we are going to install in that AKS from the reference registry. Let’s call this registry instance.azurecr.io and assume it resides in an Azure subscription with Ic9e7611c-d508-4fbf-aede-0bedfabc1560.
-  As we work with Terraform to install our charts in our AKS cluster, we’ve thought that it would be quite helpful to have a reusable module that allows us
-  to import a set of charts from the reference registry to the instance registry
-  using a local provisioner and install them on our AKS cluster.
-  We will call our reusable module in the following way:
+  We have a private registry based on Azure Container Registry where we publish all our Helm charts. Let’s call this registry reference.azurecr.io.  
+
+  When we create an AKS cluster, we also create another Azure Container Registry where we need to copy the Helm charts we are going to install in that AKS from the reference registry. Let’s call this registry instance.azurecr.io and assume it resides in an Azure subscription with Ic9e7611c-d508-4fbf-aede-0bedfabc1560.  
+
+  As we work with Terraform to install our charts in our AKS cluster, we’ve thought that it would be quite helpful to have a reusable module that allows us   
+
+  to import a set of charts from the reference registry to the instance registry using a local provisioner and install them on our AKS cluster.  
+
+  We will call our reusable module in the following way:  
 
   module "chart" {
   . . .
