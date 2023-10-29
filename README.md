@@ -30,30 +30,30 @@
     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    chart_namespace = <chart_namespace>  
     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    chart_repository = <chart_repository>  
     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    chart_version = <chart_version>  
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      values = [  
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;        {  
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;           name = <name>  
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;           value = <value>  
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;        },   
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;        {  
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;           name = <name>   
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;           value = <value>   
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;        }  
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      ]  
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      sensitive_values = [{  
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;         name = <name>  
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;         value = <value>  
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      },  
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      {  
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;         name = <name>  
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;         value = <value>  
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      }]  
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     },  
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     {  
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;        . . .  
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     }]  
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }  
-        
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   values = [  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;       {  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   name = <name>  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   value = <value>  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    },   
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    {  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     name = <name>   
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     value = <value>   
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    }  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   ]   
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   sensitive_values = [{  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;           name = <name>  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;          value = <value>  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      },  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     {  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;          name = <name>  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;           value = <value>  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     }]  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     },  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     {  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;         . . .  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     }]  
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  }  
+
   You need to implement the reusable module. It should pass validations provided by the terraform fmt and terraform validate commands.    
   You can assume the caller will be authenticated in Azure with enough permissions to import Helm charts into the instance registry and will provide the  module a configured helm provider.     
 
